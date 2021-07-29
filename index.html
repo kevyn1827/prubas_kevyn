@@ -1,0 +1,202 @@
+<html lang="en">
+
+<head>
+    <link rel=stylesheet href="style.css" type="text/css" media=screen>
+    <title>Documentacon</title>
+</head>
+
+<main>
+    <div class="head">
+        <h1>c++</h1>
+    </div>
+    <nav class="menu">
+        <a href="#intro">Introduction</a>
+        <a href="">entornos de desarrollo</a>
+        <a href="">comentarios</a>
+        <a href="">estructura de un programa</a>
+        <a href="">entrada y salida de datos</a>
+        <a href="">condicionales</a>
+        <a href="">ciclos o bucles</a>
+        <a href="#librerias">librerias</a>
+    </nav>
+
+    <section class="box-contenedor">
+        <div id="a">
+            <header id="intro">Introduction</header>
+            <h1>Inicia en la programación en C++. Aprende a programar en C++ desde cero</h1>
+            <p>En este curso, no pretendo profundizar demasiado, pues la sección se alargaría infinitamente y comenzaría a tratar temas demasiado avanzados y difíciles de entender, así que solo hablaré un poco sobre la programación básica en C++, cosas como:
+                Cómo declarar una variable, tipos de variables, funciones, un poco de punteros (aunque no mucho), librerías (las más comunes, pues existen muchísimas) compiladores y entornos principales, algunas estructuras de datos, operadores y quizá
+                algunas cositas más.
+            </p>
+            <p>Muy bien manos a la obra. Veamos algunas cuantas cosas sobre C++ y de teoría que nunca debería faltar, aunque sé que no es lo más entretenido, pero hagámoslo por cultura general, nunca se sabe cuándo se va a necesitar algún conocimiento.</p>
+
+            <h3>Historia de C++</h3>
+            <p>Bueno, te voy a resumir un poco esto, porque como siempre, me podría quedar escribiendo toda la vida si lo quisiera, pero como no es necesario, ,lo haré corto.</p>
+            <p>C++ es algo así como la evolución del lenguaje C. La intención de su creación fue extender al exitoso lenguaje de programación C con mecanismos que permitan la manipulación de objetos (un paradigma de la programación --una forma de programar
+                más avanzada--). En ese sentido, desde el punto de vista de los lenguajes orientados a objetos, C++ es un lenguaje híbrido. La historia de C (predecesor de C++) parte de un lenguaje anterior, el lenguaje B, escrito por Ken Thompson en
+                1970 con el objetivo de re-codificar el sistema operativo UNIX, que hasta el momento se había programado en ensamblador. Lo malo del lenguaje ensamblador era que lo ataba a una serie de máquinas concretas, por lo que conseguir un lenguaje
+                abstraído de cada máquina conseguiría una portabilidad del sistema muchísimo mayor. A su vez B fue inspirado en el BCPL de Martin Richards, diseñado tres años antes.</p>
+            <p>En 1972 es Dennis Ritchie (de los Laboratorios Bell de AT&T) quien diseña finalmente C a partir del B de Thompson, aportando un diseño de tipos de datos y estructuras de datos que consiguen una claridad y eficacia en el lenguaje muy superior.
+                Es un lenguaje que permite realizar una programación estructurada economizando las expresiones, con abundancia de operadores y tipos de datos (aunque los básicos sean pocos), codificando en alto y bajo nivel simultáneamente, reemplazando
+                ventajosamente la programación en ensamblador y permitiendo una utilización natural de las funciones primitivas del sistema.</p>
+            <p>Durante muchos años no existieron reglas estándar para el lenguaje, pero en 1983 se decide formar un comité con el objetivo de crear el estándar ANSI. El proceso dura seis años y a principios de los 90 el estándar es reconocido por la ISO
+                (Organización Internacional de Estándares) y comienza a comercializarse con el nombre ANSI C.</p>
+            <p>Nota: Lo que verás a continuación es un algoritmo escrito en C, lo cual es una pequeña aproximación a lo que es C++ como tal, no te preocupes si no entiendes lo que dice o hace este código, pues más adelante lo comprenderás a la perfección.
+                Este código, escribe en pantalla la frase "Hola Mundo" (sin las comillas).</p>
+            <p>Paralelamente, en 1980 surge C++ de la mano de Bjarne Stroustrup (también de Laboratorios Bell de AT&T). Diseña este lenguaje con el objetivo de añadir a C nuevas características: clases y funciones virtuales (de SIMULA 67), tipos genéricos
+                y expresiones (de ADA), la posibilidad de declarar variables en cualquier punto del programa (de ALGOL 68), y sobre todo, un auténtico motor de objetos con herencia múltiple que permite combinar la programación imperativa de C con la programación
+                orientada a objetos. Estas nuevas características mantienen siempre la esencia del lenguaje C: otorgan el control absoluto de la aplicación al programador, consiguiendo una velocidad muy superior a la ofrecida por otros lenguajes. El nombre
+                C++ fue propuesto por Rick Mascitti en el año 1983, cuando el lenguaje fue utilizado por primera vez fuera de un laboratorio científico. Antes se había usado el nombre "C con clases". En C++, la expresión "C++" significa "incremento de
+                C" y se refiere a que C++ es una extensión de C. El siguiente hecho fundamental en la evolución de C++ es sin duda la incorporación de la librería STL años más tarde, obra de Alexander Stepanov y Andrew Koening. Esta librería de clases
+                con contenedores y algoritmos genéricos proporciona a C++ una potencia única entre los lenguajes de alto nivel.</p>
+            <p>Debido al éxito del lenguaje, en 1990 se reúnen las organizaciones ANSI e ISO para definir un estándar que formalice el lenguaje. El proceso culmina en 1998 con la aprobación del ANSI C++.</p>
+            <p>Te dije que sería corto, así que finalizaremos este artículo con el famoso "Hola Mundo", ahora escrigo en C++, puedes comparar la diferencia entre ambos códigos y determinar las nuevas características que tiene C++ sobre C.</p>
+        </div>
+        <div id="b">
+            <header>entornos de desarrollo</header>
+            <h1>Instalación y configuración de un entorno de desarrollo IDE) para C++</h1>
+            <p>En esta sección conoceremos algunos de los mejores y más populares entornos de desarrollo para C/C++ (IDE). Conoceremos los principales IDE para C++, dónde descargarlos y sus principales características.</p>
+            <p>Primero que todo, como aclaración, es bueno decir que existen una enorme cantidad de entornos de desarrollo para C y C++ conocidos también como IDE. Aquí solo mencionaré algunos de los quizá más conocidos entornos de desarrollo y les diré
+                cuál es el mejor IDE, claro, desde mi punto de vista, pues habrá quienes prefieran otro, eso quedará al gusto de cada uno.</p>
+            <p>Nota: Al final de la descripción de cada uno de los entornos de desarrollo para C/C++, incluiré un enlace a la web del autor donde podrás descargar el IDE deseado.</p>
+            <p>Desde lo personal, actualmente utilizo el entorno de desarrollo (IDE) conocido como Netbeans para C/C++. Netbeans es muy popular especialmente para los desarrolladores de Java, sin embargo también posee una versión para C/C++ y es bastante
+                buena.
+            </p>
+            <p>Anteriormente, en esta misma sección, recomendaba el uso de Visual C++ Express Edition que actualmente está su versión 2013 (liberada a mediados de Octubre de 2013). Ahora no la recomiendo por varias razones:</p>
+            <ul>
+                <li>Necesitamos como mínimo tener instalado Windows 7 y tendremos problemas con otros sistemas operativos.</li>
+                <li>Ya no podremos conseguirlo de manera independiente sino que debemos bajar la suite completa que viene con C#, Visual Basic y varias cosas más.</li>
+                <li>Los requisitos son, desde mi punto de vista, muy elevados, pues necesitamos al menos 1GB de RAM, 5GB de espacio libre en disco (demasiado) y un procesador que vaya a unos 1.6 GHZ por lo menos.</li>
+                <li>Adicional a esto, ya se vienen pasos adicionales, pues debemos crearnos una cuenta para poder usarlo y demás, así que en última opté por cambiar la recomendación y pasarme a un entorno mejor, sencillo y muy popular también.</li>
+            </ul>
+            <h3>Eclipse C++:</h3>
+            <p>El IDE Eclipse para desarrollo en C/C++ se ejecuta sobre la plataforma Eclipse. Esta proporciona funcionalidades avanzadas como son: un editor (con resaltado de sintaxis y autocompletado de código), un ejecutor de código, un depurador, motor
+                de búsqueda. Este entorno de desarrollo también es bastante completo y es una muy buena opción.</p>
+            <h3>Visual C++ (Visual Studio):</h3>
+            <p>Microsoft ha puesto a disposición del público una versión "gratuita" de uso personal de Visual C++, éste es un completo entorno de desarrollo para C++, incluido en la suite de Visual Studio. Por supuesto, está orientado a aplicaciones en Windows
+                y es uno de los más populares por su facilidad de uso, características y potencia. Posee una completa documentación que permite conocer a fondo el IDE. Requiere por lo menos Windows 7 y debemos descargar el paquete completo para poder
+                usarlo y luego crear una cuenta para descargarlo.</p>
+        </div>
+        <div id="c">
+            <header>comentarios</header>
+            <h1>Comentar código en C++. Documenta tus aplicaciones por medio de comentarios en tu código</h1>
+            <p>Los comentarios son una herramienta proporcionada por un lenguaje de programación que nos ayudará a apoyar la documentación de los programas en C++ y a que sean fácilmente comprendidos por otros. Los comentarios, son líneas de código, que
+                no son tenidas en cuenta por el compilador en el momento de ejecutar nuestra aplicación, por lo tanto no están sujetas a restricciones de sintaxis ni nada similar, el uso principal de las líneas de comentario, es dar un orden y hacer más
+                entendible nuestro código, especialmente en el caso de que deba en algún momento ser revisado o leído por alguien diferente a nosotros. Por ejemplo es muy común usar las líneas de comentarios, para dar una breve explicación de como funciona
+                cierta parte de un código, lo cual permite identificar todo con mayor rapidez. Existen dos tipos de comentarios en el lenguaje:</p>
+            <p>Comentarios de Una Sola Línea: Pueden ser colocados en cualquier parte y comienzan por un doble slash "//", al colocar el doble slash al comienzo de cualquier línea de código, todo lo que halla de ahí en adelante en esa misma línea será tomado
+                como comentario, ten en cuenta que el doble slash solo convierte en comentario al texto que halla después de el y que pertenezca a su misma línea, las líneas de abajo de este, no se verán afectadas.</p>
+            <p>Comentarios Multi-línea: Van cerrados entre "/*" y "*/". Estos comentarios son similares a los anteriores, pero deben tener un comienzo y un fina, a diferencia del anterior, al poner los símbolos "/*" todo el código que halla tanto en la misma
+                línea, como en las línea debajo de este,m se convertirán en comentarios, de manera que debemos cerrarlo en el punto donde dicho comentarios termina</p>
+        </div>
+        <header>estructura de un programa</header>
+        <h1>Estructura básica de un programa en C++. Comenzando a programar en C++</h1>
+        <p>Me parece que la mejor forma de no perder el interés de los lectores de esta sección aburriéndolos con muchos conceptos y teorías, es mediante un ejemplo (a todos nos gusta la práctica). Veamos entonces nuestro primer programa en C++, que aunque
+            no es muy extenso ni complicado ni tampoco hace gran cosa, nos ayudará a establecer unas bases que resultarán muy útiles para los siguientes ejemplos que irán apareciendo durante el resto del curso. No te preocupes si no comprendes nada al
+            principio, pues me encargaré de irte enseñando cada cosa y así estaremos mejor, si no entiendes algo o crees que me faltó explicar alguna cosa, dímelo, para eso está la sección de comentarios al final de cada contenido, por ahí nos estaremos
+            comunicando.
+        </p>
+        <p>Nuestra primer línea contiene el llamado a la función main, la función main(), es la más importante de todas la funciones (es la madre del programa jejeje), pues es esta la que nuestro compilador buscará para iniciar la ejecución de nuestro código,
+            si esta función falta, nuestro programa no podrá arrancar, pues no sabrá desde donde hacerlo. La función main, como cualquier otra debe tener un tipo, es decir debe tener indicado cual es el valor que esta va a retornar al final, los tipos
+            de las funciones pueden ser, enteros (int), decimales simples(float), decimales dobles(double), booleanos(bool), vacíos (void) entre algunos más. La función main, puede ser cualquiera de estos, pero por acuerdo, se coloca siempre como entera
+            (int) y siempre retornara 0 (luego hablaré de esto). En ocasiones (dependiendo del compilador), se puede poner como void (vacía) y por lo tanto no se puede usar un return, aunque no es recomendable, simplemente por claridad y evitar errores
+            con compiladores más tradicionales.</p>
+        <p>La línea 2 contiene una llave abriendo "{", en C++, se usan las llaves tanto para indicar el comienzo como el final de cada función, sea cual sea, es decir sea la función main o cualquiera que tu hayas inventado, debe comenzar con una llave abriendo
+            y terminar con una cerrando (tiene sentido ¿no?). Es por esto, que esta llave se encuentra ahí, indicando el inicio de nuestra función main.</p>
+        <p>Esta línea, contiene la declaración de una variable llamada numero, presta especial atención a esta línea, pues es muy sensible a errores al momento de codificar, esta línea contiene primero el tipo de nuestra variable, en este caso es entera
+            (int) pero podría ser alguna de las que mencione anteriormente o cualquier otra, lógicamente valida. Esta línea es sensible, porque tanto en C como en C++ los nombres de las variables son sensibles a las mayúsculas y a las minúsculas, es decir,
+            para C o C++ la variable numero y la variable Numero, son dos variables totalmente distintas o la variable Numero y la variable NuMeRo, debes tener cuidado en no mezclar mayúsculas y minúsculas, así que acostúmbrate a escribir normalmente
+            en minúsculas. Otro detalle de esta tercera línea es el punto y coma ";" en C y C++ el punto y coma indican el final de una sentencia (no una sentencia de muerte o algo así, ¡no te distraigas!), una sentencia es una línea de código, en la
+            cual se realiza algún tipo de operación, asignación, comparación o declaración (fíjate! todas terminan en "cion") por ejemplo la línea 3, 5 y 6, son líneas de sentencia. Así que cada que realices cualquier operación en una línea, esta debe
+            termina con punto y coma, de lo contrario tendrás errores en tu código. Ten en cuenta que la línea 1, no es una sentencia, pues aunque allí se está aparentemente declarando a la función main, no es así, pues el int que hay antes del main()
+            nos indica el tipo de valor que debe retornar nuestra función, mas no exactamente el tipo que es nuestra función, por esto no se usa el punto y coma en al línea 1 (ojo! no estoy diciendo que cuando se declare una función no se use punto y
+            coma, no te enredes con esto, en la línea 1 simplemente se está implementando la función main, mas adelante lo comprenderás, confía en mi).</p>
+        <p>La línea 4 no tiene nada especial, es simplemente un campo vacío, no genera ningún tipo de cambio para el compilador, pero nos permite ordenar un poco nuestro código. Quizá si eres curioso intenta eliminar todos los saltos de línea dejando todo
+            el código en una sola línea y veras que pasa (nada malo te lo aseguro), así confirmaras tu mismo lo que dije acerca de los espacios en blanco.</p>
+        <header>entrada y salida de datos</header>
+        <h1>Entrada y salida de datos en C++. Uso de cin, cout, scanf y printf</h1>
+        <p>La entrada y salida de datos en C++ es simple (al menos para los casos más comunes). Con esto hago una comparación entre C++ y Java, pues leer una entrada del usuario por teclado en C++ es bastante simple mientras que en Java implica una serie
+            de conceptos adicionales que la hacen un tanto más complicada. Por suerte para nosotros en esta sección veremos cómo leer por teclado en C++, en otras palabras, asignar a una variable el valor que el usuario escriba por el teclado. Adicional
+            a esto veremos también cómo mostrar texto por pantalla en C++, es decir, salida de datos.</p>
+        <p>Vamos a comenzar primero con aprender a mostrar texto por pantalla en C++. Este orden se debe a que cuando queremos pedirle algún dato al usuario primero debemos hacerle saber lo que queremos que ingrese y para hacérselo saber debemos mostrarle
+            un mensaje con las indicaciones, por tal motivo es importante primero saber mostrar texto en pantalla en C++ y luego a leer texto por teclado en C++.</p>
+        <h3>Entrada o lectura de datos en C++</h3>
+        <p>Tal como mencioné hace un momento, la lectura de datos en C++ es bastante simple. Leer datos por teclado en C++ se hace usando el comando cin >> es importante notar el uso de los dos signos >> que son usados para controlar el flujo de datos. No
+            te preocupes mucho por ellos, solo ten en cuenta que cada vez que vaya a usar la instrucción cin debes agregarle >> para quedar con un cin>>. Una manera muy sencilla de recordar esta instrucción es que in significa entrar y como estamos programando
+            en C++ le añadimos la letra C al comienzo quedando así cin>> (sin olvidar los >>).</p>
+        <header>condicionales</header>
+        <h1>Los condicionales en C++. Uso declaración y sintaxis en C++</h1>
+        <p>Los condicionales en C++, son una estructura de control esencial al momento de programar y aprender a programar. Tanto C como C++ y la mayoría de los lenguajes de programación utilizados actualmente, nos permiten hacer uso de estas estructuras
+            parea definir ciertas acciones condiciones especificas en nuestro algoritmo. Un condicional, permite establecer una serie de condiciones al interior de nuestro programa, que nos ayudan a determinar que acciones llevará cabo dadas ciertas circunstancias,
+            por ejemplo si queremos decidir cuándo dar acceso a un usuario, dependiendo de si el nombre de usuario y contraseña son correctos, para algo como esto, es útil un condicional, nos permite verificar si determinada condición se cumple (en este
+            caso si la contraseña y el nombre de usuario son correctos) y de acuerdo a que se cumpla o no, llevar a cabo un conjunto de acciones. Los condicionales aumentan la "expresividad" de un software, es decir nos permiten considerar diferentes
+            situaciones con antelación, evitando o permitiendo sortear diferentes tipos de situaciones que son del interés de nuestra aplicación.</p>
+        <p>Existen diferentes tipos de condicionales, cada uno tiene una utilidad y funcionalidad diferente, que consideran diferentes situaciones que se pueden llegar a presentar durante la ejecución de un algoritmo. Depende entonces del conocimiento que
+            tengamos acerca de cada uno de los condicionales saber determinar correctamente cuando es necesario implementar uno u otro. Tenemos a nuestra disposición los siguientes tipos de condicionales en C++:</p>
+        <ul>
+            <li>Condicional If en C++</li>
+            <li>Condicional if-else en C++</li>
+            <li>Condicional Switch en C++</li>
+        </ul>
+        <p>Como mencioné anteriormente, cada uno de estos condicionales tiene ciertas características que lo hacen útil para algunos casos específicos, a lo largo de los contenidos de esta sección veremos cada uno de estos al detalle, aprendiendo durante
+            el proceso los componentes de un condicional, sintaxis de los condicionales y esas características particulares que permiten decidir cual usar en qué momento, veremos también el concepto de condicionales anidados, y algunas otras cositas</p>
+
+        <header>ciclos o bucles</header>
+        <h1>Los bucles o ciclos en C++. Declaración, uso y sintaxis de un ciclo en C++</h1>
+        <p>Los ciclos o también conocidos como bucles, son una estructura de control esencial al momento de programar. Tanto C como C++ y la mayoría de los lenguajes utilizados actualmente, nos permiten hacer uso de estas estructuras. Un ciclo o bucle permite
+            repetir una o varias instrucciones cuantas veces lo necesitemos, por ejemplo, si quisiéramos escribir los números del uno al cien no tendría sentido escribir cien líneas mostrando un numero en cada una, para esto y para muchísimas cosas más,
+            es útil un ciclo, permitiéndonos hacer una misma tarea en una cantidad de líneas muy pequeña y de forma prácticamente automática.</p>
+        <p>Existen diferentes tipos de ciclos o bucles, cada uno tiene una utilidad para casos específicos y depende de nuestra habilidad y conocimientos poder determinar en qué momento es bueno usar alguno de ellos. Tenemos entonces a nuestra disposición
+            los siguientes tipos de ciclos en C++:</p>
+        <ul>
+            <li>Ciclo for en C++</li>
+            <li>Ciclo while en C++</li>
+            <li>Ciclo do-while en C++</li>
+        </ul>
+        <p>Como mencioné anteriormente, cada uno de estos ciclos tiene ciertas características que lo hacen útil para algunos casos específicos, a lo largo de los contenidos de esta sección veremos cada uno de estos al detalle, aprendiendo durante el proceso
+            los componentes, sintaxis y esas características particulares que permiten decidir cual usar en qué momento, veremos también el concepto de contador y acumulador que parte de la existencia de los ciclos</p>
+        <p>Te recuerdo, que aunque intentaré profundizar bastante en cada concepto, lo haré enfocándome hacia el uso de los ciclos en el lenguaje C++ y no tanto hacia la parte de la lógica de los ciclos en particular, si tienes problemas con la correcta
+            comprensión de la lógica y utilidad de cualquier tipo de ciclo o de los ciclos en general, te invito a que primero leas la sección de Fundamentación de los Ciclos, en dicha sección podrás comprender correctamente el funcionamiento de un ciclo
+            y posteriormente podrás regresar a esta sección para aprender a implementar los ciclos en C++</p>
+
+
+
+        <header>estructura de datos</header>
+        <h1>Estructuras de datos en C++. Uso, manejo y ventajas. Arreglos, vectores, matrices y demás</h1>
+        <p>Las estructuras de datos en C++ se pueden entender como un tipo de dato compuesto (no complejo). Las estructuras de datos permiten almacenar de manera ordenada una serie de valores dados en una misma variable. Las estructuras de datos más comunes
+            son los arrays, que pueden ser unidimensionales (de una dimensión) también conocidos como vectores, o multidimensionales (de varias dimensiones) también conocidos como matrices, aunque hay otras un poco más diferentes como son struct, las
+            enumeraciones y los punteros.</p>
+        <p>En esta serie de contenidos aprenderemos de estas estructuras de datos con detalle. Las estructuras de datos han sido creadas para solucionar una gran variedad de problemáticas que no eran solucionables (o al menos no muy fácilmente) con los tipos
+            de datos primitivos. Tal como mencioné hace un momento, las estructuras de datos se pueden ver como una agrupación o estructuración (valga la redundancia) para una serie de tipos de datos primitivos (aunque también pueden poseer tipos de datos
+            complejos) y que pueden ser fácilmente utilizadas e identificadas. Sin la existencia de las estructuras de datos sería imposible o bastante complicado, por ejemplo, conocer y manejar todos los números de identificación, nombres y, direcciones
+            de todos los usuarios de un sistema (que normalmente serían muchísimos) pero ahora con las estructuras de datos es muy simple definir una serie de posiciones en memoria para cada valor que deseamos guardar o definir un orden o valores específicos
+            para cada campo y accediendo a ellos generalmente por medio de una única variable. Todo esto es sencillo hacerlo con el uso de las estructuras de datos y sin desperdiciar recursos.</p>
+
+        <header id="librerias">librerias</header>
+        <h1>Bibliotecas o librerías en C++. Declaración y uso de librerías. Include en C++</h1>
+        <p>Junto con los compiladores de C y C++, se incluyen ciertos archivos llamados bibliotecas mas comúnmente librerías. Las bibliotecas contienen el código objeto de muchos programas que permiten hacer cosas comunes, como leer el teclado, escribir
+            en la pantalla, manejar números, realizar funciones matemáticas, etc.</p>
+        <p>Las bibliotecas están clasificadas por el tipo de trabajos que hacen, hay bibliotecas de entrada y salida, matemáticas, de manejo de memoria, de manejo de textos y como imaginarás existen muchísimas librerías disponibles y todas con una función
+            especifica.
+        </p>
+        <p>Nota: Existe una discusión sobre el nombre de estos archivos. Muchos personas consideran que el nombre adecuado es archivos de biblioteca, y estan en lo correcto. Sin embargo, la mayoría llamamos a estos archivos librerías, y también me incluyo
+            entre estos. El error proviene del nombre en inglés, que es library. Este término se traduce como biblioteca, y no como librería. De este modo a lo largo de esta sección las llamaré de cualquiera de las dos formas, para estár mas claros.</p>
+        <h3>¿Qué son exactamente las librerías?</h3>
+        <p>En C++, se conoce como librerías (o bibliotecas) a cierto tipo de archivos que podemos importar o incluir en nuestro programa. Estos archivos contienen las especificaciones de diferentes funcionalidades ya construidas y utilizables que podremos
+            agregar a nuestro programa, como por ejemplo leer del teclado o mostrar algo por pantalla entre muchas otras más.</p>
+        <p>Al poder incluir estas librerías con definiciones de diferentes funcionalidades podremos ahorrarnos gran cantidad de cosas, imaginemos por ejemplo que cada vez que necesitemos leer por teclado, debamos entonces crear una función que lo haga (algo
+            realmente complejo), al poder contar con las librerías en C++, podremos hacer uso de una gran variedad de funciones que nos facilitaran la vida y aumentarán la modularidad de nuestros códigos.</p>
+        <p>Las librerías no son únicamente archivos externos creados por otros, también es posible crear nuestras propias librerías y utilizarlas en nuestros programas. Las librerías pueden tener varias extensiones diferentes, las más comunes son: .lib,
+            .bpl, .a, .dll, .h y algunas más ya no tan comunes.</p>
+        <p>En conclusión: Las librearías son archivos (no siempre externos) que nos permiten llevar a cabo diferentes tareas sin necesidad de preocuparnos por cómo se hacen sino simplemente entender cómo usarlas. Las librearías en C++ permiten hacer nuestros
+            programas más modulares y reutilizables, facilitando además crear programas con funcionalidades bastante complejas en unas pocas líneas de código.</p>
+        <h3>Sintaxis para declarar Librerías en C++</h3>
+        <p>La declaración de librerías, tanto en C como en C++, se debe hacer al principio de todo nuestro código, antes de la declaración de cualquier función o línea de código, debemos indicarle al compilador que librerías usar, para el saber que términos
+            estaran correctos en la escritura de nuestro código y cuáles no. La sintaxis es la siguiente: #include nombre de la librería o alternativamente #include "nombre de la librería". Cualquiera de las 2 formas es válida en C++ (no estoy seguro
+            si en C sea válido), ten en cuenta que siempre el nombre de la librería debe ir entre " y " . En tu código puedes declarar todas las librerías que quieras aunque en realidad no tienen sentido declarar una librería que no vas a usar en tu programa,
+            sin embargo no existe límite para esto.</p>
+    </section>
+
+</main>
+
+</html>
